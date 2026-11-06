@@ -20,7 +20,7 @@ export function RequestScreen({
     <main className="app-shell app-shell--with-nav">
       <section className="screen-content request-screen">
         <button className="back-link" onClick={onBack}>
-          <img src="/figma/icons/arrow-left-circle.svg" alt="" width={24} height={24} />
+          <img src="figma/icons/arrow-left-circle.svg" alt="" width={24} height={24} />
           Back to listing
         </button>
 
@@ -38,9 +38,9 @@ export function RequestScreen({
         <div className="request-form">
           <label>Preferred dates</label>
           <button className="request-input">
-            <img src="/figma/icons/calendar-request.svg" alt="" width={20} height={20} />
+            <img src="figma/icons/calendar-request.svg" alt="" width={20} height={20} />
             <span>{match.dates}</span>
-            <img src="/figma/icons/chevron-down.svg" alt="" width={14} height={14} />
+            <img src="figma/icons/chevron-down.svg" alt="" width={14} height={14} />
           </button>
 
           <label>Your message</label>
@@ -50,14 +50,14 @@ export function RequestScreen({
           </div>
 
           <div className="request-privacy-note">
-            <img src="/figma/icons/shield-check.svg" alt="" width={18} height={18} />
+            <img src="figma/icons/shield-check.svg" alt="" width={18} height={18} />
             <p>{match.name} will receive your profile and request details. You can continue the conversation in Chat.</p>
           </div>
         </div>
 
         <button className="request-send-button" onClick={() => onSend(message)}>
           Send request
-          <img src="/figma/icons/message-chat-square.svg" alt="" width={24} height={24} />
+          <img src="figma/icons/message-chat-square.svg" alt="" width={24} height={24} />
         </button>
       </section>
       <BottomNav active="chat" onNavigate={onNavigate} />

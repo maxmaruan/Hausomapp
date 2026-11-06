@@ -20,7 +20,7 @@ export function MatchCard({
     <article className={`match-card ${hasAvatar ? 'match-card--listing' : 'match-card--person'}`}>
       {hasAvatar && <img className="card-avatar" src={match.avatar} alt={`${match.name}'s avatar`} />}
       <button className="heart-button" onClick={onLike} aria-label="Favorite listing">
-        <img src={liked ? '/figma/icons/heart-filled.svg' : '/figma/icons/heart.svg'} alt="" width={24} height={24} />
+        <img src={liked ? 'figma/icons/heart-filled.svg' : 'figma/icons/heart.svg'} alt="" width={24} height={24} />
       </button>
       <div className="photo-wrap" onClick={onOpen} role="button" tabIndex={0}>
         <img
@@ -39,12 +39,12 @@ export function MatchCard({
       <p className="card-date">{match.dates}</p>
       <MatchTags tags={match.tags} compact />
       <strong className={`match-score ${highlighted ? 'match-score--highlight' : ''}`}>
-        <img src={highlighted ? '/figma/icons/fire.svg' : '/figma/icons/fire-dark.svg'} alt="" width={24} height={24} />
+        <img src={highlighted ? 'figma/icons/fire.svg' : 'figma/icons/fire-dark.svg'} alt="" width={24} height={24} />
         {match.matchScore}% Match
       </strong>
       <button className="details-button" onClick={onOpen}>
         More details
-        <img src="/figma/icons/arrow-circle-broken-right.svg" alt="" width={24} height={24} />
+        <img src="figma/icons/arrow-circle-broken-right.svg" alt="" width={24} height={24} />
       </button>
     </article>
   );

@@ -30,7 +30,7 @@ export function DetailScreen({
     <main className="app-shell app-shell--with-nav">
       <section className="screen-content detail-screen">
         <button className="back-link" onClick={onBack}>
-          <img src="/figma/icons/arrow-circle-left.svg" alt="" width={24} height={24} />
+          <img src="figma/icons/arrow-circle-left.svg" alt="" width={24} height={24} />
           Back to offers
         </button>
 
@@ -47,10 +47,10 @@ export function DetailScreen({
         {!isListing && <p className="detail-location">{match.location}</p>}
         <div className="detail-meta-row">
           <span>
-            <img src="/figma/icons/calendar.svg" alt="" width={24} height={24} /> {match.dates}
+            <img src="figma/icons/calendar.svg" alt="" width={24} height={24} /> {match.dates}
           </span>
           <span>
-            <img src="/figma/icons/coins-hand-24.svg" alt="" width={24} height={24} /> {match.price}
+            <img src="figma/icons/coins-hand-24.svg" alt="" width={24} height={24} /> {match.price}
           </span>
         </div>
 
@@ -59,7 +59,7 @@ export function DetailScreen({
             <p className="detail-description">{match.about}</p>
             <button className="expand-button" onClick={() => setExpanded(!expanded)}>
               <img
-                src="/figma/icons/chevron-left.svg"
+                src="figma/icons/chevron-left.svg"
                 alt=""
                 width={18}
                 height={18}
@@ -83,7 +83,7 @@ export function DetailScreen({
             <img className="landlord-avatar" src={match.avatar} alt={`${match.name}'s avatar`} />
             <div className="landlord-card-top">
               <p className="landlord-label">
-                <img src="/figma/icons/fingerprint-03.svg" alt="" width={18} height={18} /> Authorised landlord
+                <img src="figma/icons/fingerprint-03.svg" alt="" width={18} height={18} /> Authorised landlord
               </p>
               <strong>{match.name}</strong>
               <div className="landlord-meta">
@@ -106,7 +106,7 @@ export function DetailScreen({
         )}
 
         <strong className="match-score match-score--inline">
-          <img src="/figma/icons/fire-dark.svg" alt="" width={24} height={24} /> {match.matchScore}% Match
+          <img src="figma/icons/fire-dark.svg" alt="" width={24} height={24} /> {match.matchScore}% Match
         </strong>
 
         <MatchTags tags={match.tags} tone="white" />
@@ -126,11 +126,11 @@ export function DetailScreen({
       <div className="detail-actions">
         <button className="primary-button" onClick={onRequest}>
           Send a request
-          <img src="/figma/icons/message-chat-square.svg" alt="" width={24} height={24} />
+          <img src="figma/icons/message-chat-square.svg" alt="" width={24} height={24} />
         </button>
         <button className={`secondary-button ${liked ? 'secondary-button--liked' : ''}`} onClick={onToggleLike}>
           Add to favorites
-          {liked ? <Heart size={20} fill={palette.red} /> : <img src="/figma/icons/heart-outline.svg" alt="" width={24} height={24} />}
+          {liked ? <Heart size={20} fill={palette.red} /> : <img src="figma/icons/heart-outline.svg" alt="" width={24} height={24} />}
         </button>
       </div>
 
