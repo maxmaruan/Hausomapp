@@ -4,6 +4,8 @@ import { getMatch } from './data/matches';
 import { chatThreads as initialChatThreads } from './data/chats';
 import { SplashScreen } from './screens/SplashScreen';
 import { IntroScreen } from './screens/IntroScreen';
+import { ProblemScreen } from './screens/ProblemScreen';
+import { SolutionScreen } from './screens/SolutionScreen';
 import { RoleScreen } from './screens/RoleScreen';
 import { MeetScreen } from './screens/MeetScreen';
 import { DetailScreen } from './screens/DetailScreen';
@@ -112,7 +114,9 @@ function App() {
   };
 
   if (screen === 'splash') return <SplashScreen stage={preloaderStage} />;
-  if (screen === 'intro') return <IntroScreen onStart={() => setScreen('role')} />;
+  if (screen === 'intro') return <IntroScreen onStart={() => setScreen('problem')} />;
+  if (screen === 'problem') return <ProblemScreen onNext={() => setScreen('solution')} />;
+  if (screen === 'solution') return <SolutionScreen onNext={() => setScreen('role')} />;
   if (screen === 'role')
     return <RoleScreen selectedRole={selectedRole} setSelectedRole={setSelectedRole} onContinue={() => setScreen('meet')} />;
 

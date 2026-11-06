@@ -1,6 +1,8 @@
 export type Screen =
   | 'splash'
   | 'intro'
+  | 'problem'
+  | 'solution'
   | 'role'
   | 'meet'
   | 'detail'
