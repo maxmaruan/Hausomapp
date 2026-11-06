@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: '/Hausomapp/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/Hausomapp/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -14,4 +14,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+}));
